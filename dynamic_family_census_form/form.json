@@ -1,0 +1,103 @@
+{
+  "formTitle": "Family Census Form",
+  "sections": [
+    {
+      "sectionTitle": "Family Information",
+      "fields": [
+        {
+          "id": "family_name",
+          "type": "text",
+          "label": "Family Name",
+          "placeholder": "Enter your family name",
+          "required": true
+        },
+        {
+          "id": "address",
+          "type": "text",
+          "label": "Address",
+          "placeholder": "Enter your address",
+          "required": true
+        }
+      ]
+    },
+    {
+      "sectionTitle": "Family Members",
+      "repeatable": true,
+      "fields": [
+        {
+          "id": "member_name",
+          "type": "text",
+          "label": "Name",
+          "placeholder": "Enter member's name",
+          "required": true
+        },
+        {
+          "id": "relationship",
+          "type": "dropdown",
+          "label": "Relationship",
+          "options": ["Father", "Mother", "Son", "Daughter", "Other"],
+          "required": true
+        },
+        {
+          "id": "age",
+          "type": "number",
+          "label": "Age",
+          "placeholder": "Enter member's age",
+          "required": true,
+          "validation": {
+            "min": 0,
+            "max": 120
+          }
+        },
+        {
+          "id": "gender",
+          "type": "radio",
+          "label": "Gender",
+          "options": ["Male", "Female", "Other"],
+          "required": true
+        },
+        {
+          "id": "occupation",
+          "type": "text",
+          "label": "Occupation",
+          "placeholder": "Enter occupation",
+          "required": false
+        },
+        {
+          "id": "marital_status",
+          "type": "dropdown",
+          "label": "Marital Status",
+          "options": ["Single", "Married", "Divorced", "Widowed"],
+          "required": true
+        }
+      ]
+    },
+    {
+      "sectionTitle": "Contact Information",
+      "fields": [
+        {
+          "id": "phone_number",
+          "type": "text",
+          "label": "Phone Number",
+          "placeholder": "Enter phone number",
+          "required": true,
+          "validation": {
+            "pattern": "^[0-9]{10}$",
+            "errorMessage": "Phone number must be 10 digits"
+          }
+        },
+        {
+          "id": "email",
+          "type": "text",
+          "label": "Email Address",
+          "placeholder": "Enter email address",
+          "required": false,
+          "validation": {
+            "pattern": "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$",
+            "errorMessage": "Enter a valid email address"
+          }
+        }
+      ]
+    }
+  ]
+}
