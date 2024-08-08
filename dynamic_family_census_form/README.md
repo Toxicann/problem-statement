@@ -42,14 +42,5 @@ A fully functional Flutter application that dynamically renders a Family Census 
 ## **Bonus Point**
 
 - **CSV Export:** Implement an option to export the saved form data to a CSV file, which should include all census details and be easily shareable.
-
-## **Getting Started**
-
-### **Prerequisites**
-- Flutter SDK
-- Dart
-- Firebase account for data synchronization
-- SQLite, Hive, or other local storage options
-
 ---
 
